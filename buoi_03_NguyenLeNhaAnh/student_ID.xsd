@@ -1,0 +1,52 @@
+<xs:element 
+    name="school" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType>
+    <xs:sequence>
+      
+      <!-- Danh sách sinh viên -->
+      <xs:element 
+          name="student" 
+          maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element 
+                name="name" 
+                type="xs:string"/>
+            <xs:element 
+                name="date" 
+                type="xs:date"/>
+          </xs:sequence>
+          <xs:attribute 
+              name="id" 
+              type="xs:ID" 
+              use="required"/>
+        </xs:complexType>
+      </xs:element>
+      
+      <!-- Danh sách lớp học -->
+      <xs:element 
+          name="class" 
+          maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element 
+                name="classname" 
+                type="xs:string"/>
+            <xs:element 
+                name="members">
+              <xs:complexType>
+                <xs:attribute 
+                    name="refs" 
+                    type="xs:IDREFS" 
+                    use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>

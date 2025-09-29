@@ -1,0 +1,111 @@
+<school>
+    <!-- Danh sách sinh viên -->
+    <student 
+        id="SV01">
+        <name>Nguyễn Văn A</name>
+        <date>1997-01-01</date>
+    </student>
+
+    <student 
+        id="SV02">
+        <name>Trần Thị B</name>
+        <date>1997-02-02</date>
+    </student>
+
+    <student 
+        id="SV03">
+        <name>Lê Văn C</name>
+        <date>1997-03-03</date>
+    </student>
+
+    <student 
+        id="SV04">
+        <name>Phạm Thị D</name>
+        <date>1997-04-04</date>
+    </student>
+
+    <student 
+        id="SV05">
+        <name>Hoàng Văn E</name>
+        <date>1997-05-05</date>
+    </student>
+
+    <student 
+        id="SV06">
+        <name>Nguyễn Thị F</name>
+        <date>1997-06-06</date>
+    </student>
+
+    <student 
+        id="SV07">
+        <name>Trần Văn G</name>
+        <date>1997-07-07</date>
+    </student>
+
+    <student 
+        id="SV08">
+        <name>Lê Thị H</name>
+        <date>1997-08-08</date>
+    </student>
+
+    <student 
+        id="SV09">
+        <name>Phạm Văn I</name>
+        <date>1997-09-09</date>
+    </student>
+
+    <student 
+        id="SV10">
+        <name>Hoàng Thị J</name>
+        <date>1997-10-10</date>
+    </student>
+
+    <student 
+        id="SV11">
+        <name>Nguyễn Văn K</name>
+        <date>1997-11-11</date>
+    </student>
+
+    <student 
+        id="SV12">
+        <name>Trần Thị L</name>
+        <date>1997-12-12</date>
+    </student>
+
+    <student 
+        id="SV13">
+        <name>Lê Văn M</name>
+        <date>1998-01-13</date>
+    </student>
+
+    <student 
+        id="SV14">
+        <name>Phạm Thị N</name>
+        <date>1998-02-14</date>
+    </student>
+
+    <student 
+        id="SV15">
+        <name>Hoàng Văn O</name>
+        <date>1998-03-15</date>
+    </student>
+
+    <!-- Danh sách lớp học -->
+    <class>
+        <classname>Lập trình XML</classname>
+        <members 
+            refs="SV01 SV02 SV03 SV04 SV05"/>
+    </class>
+
+    <class>
+        <classname>Cơ sở dữ liệu</classname>
+        <members 
+            refs="SV06 SV07 SV08 SV09 SV10"/>
+    </class>
+
+    <class>
+        <classname>Cấu trúc dữ liệu</classname>
+        <members 
+            refs="SV11 SV12 SV13 SV14 SV15"/>
+    </class>
+</school>
