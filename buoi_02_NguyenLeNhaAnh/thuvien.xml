@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thuvien>
+    <sach>
+        <title>Lập Trình Python Cơ Bản</title>
+        <author>Nguyễn Văn A</author>
+        <year>2020</year>
+        <genre>Khoa học máy tính</genre>
+    </sach>
+    <sach>
+        <title>Nhà Giả Kim</title>
+        <author>Paulo Coelho</author>
+        <year>1988</year>
+        <genre>Tiểu thuyết</genre>
+    </sach>
+    <sach>
+        <title>Dế Mèn Phiêu Lưu Ký</title>
+        <author>Tô Hoài</author>
+        <year>1941</year>
+        <genre>Văn học thiếu nhi</genre>
+    </sach>
+</thuvien>

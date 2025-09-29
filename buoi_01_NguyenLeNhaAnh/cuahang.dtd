@@ -1,0 +1,9 @@
+<!ELEMENT cuahang (sanpham+)>
+
+<!ELEMENT sanpham EMPTY>
+<!ATTLIST sanpham 
+    id ID #REQUIRED
+    category CDATA #REQUIRED
+    price CDATA #REQUIRED
+    currency (VND | USD | EUR | JPY) #REQUIRED
+>

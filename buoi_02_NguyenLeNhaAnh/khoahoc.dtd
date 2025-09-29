@@ -1,0 +1,22 @@
+<!ELEMENT elearning (course+)>
+
+<!ELEMENT course (title, instructor, students)>
+<!ATTLIST course 
+    id ID #REQUIRED
+    category CDATA #REQUIRED>
+
+<!ELEMENT title (#PCDATA)>
+
+<!ELEMENT instructor (name, email)>
+<!ATTLIST instructor 
+    id ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT students (student+)>
+
+<!ELEMENT student (name)>
+<!ATTLIST student 
+    id ID #REQUIRED
+    progress CDATA #REQUIRED>

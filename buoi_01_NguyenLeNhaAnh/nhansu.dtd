@@ -1,0 +1,10 @@
+<!ELEMENT company (department+)>
+
+<!ELEMENT department (employee+)>
+<!ATTLIST department name CDATA #REQUIRED>
+
+<!ELEMENT employee (name, position)>
+<!ATTLIST employee id ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
