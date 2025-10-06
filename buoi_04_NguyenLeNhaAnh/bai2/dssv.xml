@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dssv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="dssv.xsd">
+    <khoa>
+        <makhoa>CNTT</makhoa>
+        <tenkhoa>congnghethongtin</tenkhoa>
+    </khoa>
+    <khoa>
+        <makhoa>KT</makhoa>
+        <tenkhoa>kinhte</tenkhoa>
+    </khoa>
+
+    <lop makhoa = "CNTT">
+        <malop>CNTT01</malop>
+        <tenlop>Cong Nghe Thong Tin 01</tenlop>
+    </lop>
+    <lop makhoa = "CNTT">
+        <malop>CNTT02</malop>
+        <tenlop>Cong Nghe Thong Tin 02</tenlop>
+    </lop>
+    <lop makhoa = "KT">
+        <malop>KT01</malop>
+        <tenlop>Kinh Te 01</tenlop>
+    </lop>
+    <lop makhoa = "KT">
+        <malop>KT02</malop>
+        <tenlop>Kinh Te 02</tenlop>
+    </lop>
+
+    <sinhvien malop = "CNTT01">
+        <mssv>SV01</mssv>
+        <hoten>Nguyen Van Anh</hoten>
+        <email>nva@gmail.com</email>
+        <diachi>123 Tran Hung Dao</diachi>
+        <sdt>0987654321</sdt>
+    </sinhvien>
+    <sinhvien malop = "CNTT02">
+        <mssv>SV02</mssv>
+        <hoten>Nguyen Van Binh</hoten>
+        <email>nvb@gmail.com</email>
+        <diachi>456 Tran Hung Dao</diachi>
+        <sdt>0987654322</sdt>
+    </sinhvien>
+    <sinhvien malop = "KT01">
+        <mssv>SV03</mssv>
+        <hoten>Nguyen Van Cao</hoten>
+        <email>nvc@gmail.com</email>
+        <diachi>789 Tran Hung Dao</diachi>
+        <sdt>0987654323</sdt>
+    </sinhvien>
+    <sinhvien malop = "KT02">
+        <mssv>SV04</mssv>
+        <hoten>Nguyen Van Dinh</hoten>
+        <email>nvd@gmail.com</email>
+        <diachi>246 Tran Hung Dao</diachi>
+        <sdt>0987654324</sdt>
+    </sinhvien>
+</dssv>

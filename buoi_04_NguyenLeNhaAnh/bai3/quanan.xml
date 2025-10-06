@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QUANAN
+    xmlns="http://example.com/quanan"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://example.com/quanan quanan.xsd">
+
+  
+  <BANs>
+    <BAN tenban="B01">
+        <SoBan>1</SoBan>
+    </BAN>
+    <BAN tenban="B02">
+        <SoBan>2</SoBan>
+    </BAN>
+    <BAN tenban="B03">
+        <SoBan>3</SoBan>
+    </BAN>
+    <BAN tenban="B04">
+        <SoBan>4</SoBan>
+    </BAN>
+    <BAN tenban="B05">
+        <SoBan>5</SoBan>
+    </BAN>
+  </BANs>
+
+  
+  <NHANVIENs>
+    <NHANVIEN manv="NV01">
+      <TenNV>Nguyen Le Nha Anh</TenNV>
+      <SDT>0901234567</SDT>
+      <DiaChi>12 Nguyen Trai</DiaChi>
+      <GioiTinh>Nu</GioiTinh>
+      <Username>nhaanhanv</Username>
+      <Password>Pass2025_01</Password>
+    </NHANVIEN>
+
+    <NHANVIEN manv="NV02">
+      <TenNV>Nguyen Minh Khoa</TenNV>
+      <SDT>0912345678</SDT>
+      <DiaChi>34 Ly Thuong Kiet</DiaChi>
+      <GioiTinh>Nam</GioiTinh>
+      <Username>khoatran01</Username>
+      <Password>StrongPwd2025</Password>
+    </NHANVIEN>
+
+    <NHANVIEN manv="NV03">
+      <TenNV>Trinh Bao Khang</TenNV>
+      <SDT>0987654321</SDT>
+      <DiaChi>56 CMT8</DiaChi>
+      <GioiTinh>Nu</GioiTinh>
+      <Username>quynhanh07</Username>
+      <Password>QAnhsecure10</Password>
+    </NHANVIEN>
+
+    <NHANVIEN manv="NV04">
+      <TenNV>Tran Gia Bao</TenNV>
+      <SDT>0931122334</SDT>
+      <DiaChi>78 Vo Van Tan</DiaChi>
+      <GioiTinh>Nam</GioiTinh>
+      <Username>lelonghh</Username>
+      <Password>Long2025safe</Password>
+    </NHANVIEN>
+
+    <NHANVIEN manv="NV05">
+      <TenNV>Nguyen Phat Tai</TenNV>
+      <SDT>0977332211</SDT>
+      <DiaChi>90 Hai Ba Trung</DiaChi>
+      <GioiTinh>Nu</GioiTinh>
+      <Username>mylinhdo99</Username>
+      <Password>DoMyLinh2025</Password>
+    </NHANVIEN>
+  </NHANVIENs>
+
+
+  
+  <MONs>
+    <MON mamon="M01">
+        <TenMon>Pho bo</TenMon>
+        <Gia>45000</Gia>
+    </MON>
+    <MON mamon="M02">
+        <TenMon>Bun cha</TenMon>
+        <Gia>50000</Gia>
+    </MON>
+    <MON mamon="M03">
+        <TenMon>Banh mi thit</TenMon>
+        <Gia>25000</Gia>
+    </MON>
+    <MON mamon="M04">
+        <TenMon>Ca phe sua</TenMon>
+        <Gia>30000</Gia>
+    </MON>
+    <MON mamon="M05">
+        <TenMon>Tra dao</TenMon>
+        <Gia>28000</Gia>
+    </MON>
+  </MONs>
+
+  
+  <HOADONs>
+    <HOADON sohd="HD001">
+        <NgayLap>2025-10-01</NgayLap>
+        <TongTien>128000</TongTien>
+        <BanRef>B01</BanRef>
+        <LapHD>NV01</LapHD>
+    </HOADON>
+    <HOADON sohd="HD002">
+        <NgayLap>2025-10-01</NgayLap>
+        <TongTien>95000</TongTien>
+        <BanRef>B02</BanRef>
+        <LapHD>NV02</LapHD>
+    </HOADON>
+    <HOADON sohd="HD003">
+        <NgayLap>2025-10-02</NgayLap>
+        <TongTien>155000</TongTien>
+        <BanRef>B03</BanRef>
+        <LapHD>NV03</LapHD>
+    </HOADON>
+    <HOADON sohd="HD004">
+        <NgayLap>2025-10-02</NgayLap>
+        <TongTien>73000</TongTien>
+        <BanRef>B04</BanRef>
+        <LapHD>NV04</LapHD>
+    </HOADON>
+    <HOADON sohd="HD005">
+        <NgayLap>2025-10-03</NgayLap>
+        <TongTien>102000</TongTien>
+        <BanRef>B05</BanRef>
+        <LapHD>NV05</LapHD>
+    </HOADON>
+  </HOADONs>
+
+
+  
+  <CTHDs>
+    <CTHD sohdRef="HD001" mamonRef="M01">
+        <SoLuong>1</SoLuong>
+    </CTHD>
+    <CTHD sohdRef="HD001" mamonRef="M04">
+        <SoLuong>2</SoLuong>
+    </CTHD>
+    <CTHD sohdRef="HD002" mamonRef="M02">
+        <SoLuong>1</SoLuong>
+    </CTHD>
+    <CTHD sohdRef="HD003" mamonRef="M03">
+        <SoLuong>2</SoLuong>
+    </CTHD>
+    <CTHD sohdRef="HD004" mamonRef="M05">
+        <SoLuong>1</SoLuong>
+    </CTHD>
+  </CTHDs>
+
+</QUANAN>

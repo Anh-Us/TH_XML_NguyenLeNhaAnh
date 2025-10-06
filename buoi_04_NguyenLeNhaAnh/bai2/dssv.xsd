@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!-- ===== Kiểu dùng chung ===== -->
+  <!-- Mã (áp dụng cho makhoa, malop): chỉ chữ hoa và số, 2–10 ký tự -->
+  <xs:simpleType name="CodeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="10"/>
+      <xs:pattern value="[A-Z0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tên chung (áp dụng cho tên khoa/lớp ở mức tổng quát) -->
+  <xs:simpleType name="NameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+      <!-- Cho phép chữ, số, khoảng trắng (đáp ứng tên lớp có số như '... 01') -->
+      <xs:pattern value="[A-Za-z0-9 ]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tên khoa: chỉ chứa a-z (thường) và khoảng trắng, theo yêu cầu -->
+  <xs:simpleType name="TenKhoaType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+      <xs:pattern value="[a-z]+( [a-z]+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SĐT Việt Nam: bắt đầu 0 + 9 số -->
+  <xs:simpleType name="TelVNType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="0[0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ===== Cấu trúc chính ===== -->
+  <xs:element name="dssv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="khoa" type="KhoaType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="lop" type="LopType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="sinhvien" type="SinhVienType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- ===== Khóa chính ===== -->
+    <!-- KHOA: makhoa duy nhất -->
+    <xs:key name="khoa_pk">
+      <xs:selector xpath="khoa"/>
+      <xs:field xpath="makhoa"/>
+    </xs:key>
+
+    <!-- LOP: malop duy nhất -->
+    <xs:key name="lop_pk">
+      <xs:selector xpath="lop"/>
+      <xs:field xpath="malop"/>
+    </xs:key>
+
+    <!-- SINHVIEN: mssv duy nhất (toàn cục) -->
+    <xs:key name="sv_pk">
+      <xs:selector xpath="sinhvien"/>
+      <xs:field xpath="mssv"/>
+    </xs:key>
+
+    <!-- ===== Khóa ngoại ===== -->
+    <!-- LOP.@makhoa tham chiếu KHOA.makhoa -->
+    <xs:keyref name="lop_fk_khoa" refer="khoa_pk">
+      <xs:selector xpath="lop"/>
+      <xs:field xpath="@makhoa"/>
+    </xs:keyref>
+
+    <!-- SINHVIEN.@malop tham chiếu LOP.malop -->
+    <xs:keyref name="sv_fk_lop" refer="lop_pk">
+      <xs:selector xpath="sinhvien"/>
+      <xs:field xpath="@malop"/>
+    </xs:keyref>
+  </xs:element>
+
+  <!-- ===== Kiểu phức hợp ===== -->
+  <xs:complexType name="KhoaType">
+    <xs:sequence>
+      <xs:element name="makhoa" type="CodeType"/>
+      <!-- tenkhoa dùng TenKhoaType (a-z) theo ràng buộc -->
+      <xs:element name="tenkhoa" type="TenKhoaType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LopType">
+    <xs:sequence>
+      <xs:element name="malop" type="CodeType"/>
+      <!-- tenlop dùng NameType (cho phép số, đáp ứng '... 01') -->
+      <xs:element name="tenlop" type="NameType"/>
+    </xs:sequence>
+    <!-- Khóa ngoại: tham chiếu khoa -->
+    <xs:attribute name="makhoa" type="CodeType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="SinhVienType">
+    <xs:sequence>
+      <xs:element name="mssv" type="xs:string"/>
+      <xs:element name="hoten" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="diachi" type="xs:string"/>
+      <xs:element name="sdt" type="TelVNType"/>
+    </xs:sequence>
+    <!-- Khóa ngoại: tham chiếu lớp -->
+    <xs:attribute name="malop" type="CodeType" use="required"/>
+  </xs:complexType>
+
+</xs:schema>
